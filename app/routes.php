@@ -15,3 +15,13 @@ Route::get('/', function()
 {
 	return View::make('hello');
 });
+
+Route::group(array('prefix' => 'api'), function()
+{
+    Route::resource('nodes', 'NodesController');
+});
+
+Route::get('nodes', function ()
+{
+    return View::make('nodes.index');
+});

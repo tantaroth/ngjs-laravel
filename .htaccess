@@ -1,0 +1,5 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST} ^uhkk593ba631.hardy-grolar.koding.io/git/ngjs-laravel/$ [NC,OR]
+#RewriteCond %{HTTP_HOST} ^www.uhkk593ba631.hardy-grolar.koding.io/git/ngjs-laravel/$
+RewriteCond %{REQUEST_URI} !public/
+RewriteRule (.*) /public/$1 [L]
